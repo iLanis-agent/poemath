@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PoE Math - app</title>
+<style>
+  :root { --accent:#1d4ed8; --ink:#0f1b3d; --paper:#f4f7fe; --soft:#dde6fa; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); line-height:1.55; }
+  main { max-width:660px; margin:0 auto; }
+  .boundary { background:#fdeaea; border-left:6px solid #b03030; color:#5c1c1c; border-radius:6px; padding:1rem 1.1rem; }
+  .boundary strong { display:block; margin-bottom:.3rem; }
+  body { padding:2rem 1.2rem; }
+  h1 { font-size:1.8rem; color:var(--accent); }
+  .boundary { margin:1rem 0 1.4rem; }
+  .panel { background:var(--soft); border-left:5px solid var(--accent); border-radius:6px; padding:1rem 1.1rem; margin-bottom:1.1rem; }
+  h2 { font-size:1.1rem; margin-bottom:.6rem; }
+  p.note { font-size:.9rem; margin-bottom:.4rem; }
+  label { display:block; font-size:.9rem; margin:.45rem 0 .1rem; }
+  input { width:100%; padding:.45rem .55rem; font-size:1rem; border:1px solid #94b0ec; border-radius:6px; background:#fff; color:var(--ink); }
+  .row2 { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; }
+  .row3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:.6rem; }
+  .out { margin-top:.7rem; font-size:.98rem; background:#fff; border:1px dashed #94b0ec; border-radius:6px; padding:.6rem .7rem; min-height:2.4rem; overflow-wrap:anywhere; }
+  .out.err { border-color:#b03030; color:#8a1f1f; }
+  footer { margin-top:1.8rem; font-size:.85rem; color:#5f78b0; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>PoE Math</h1>
+  <div class="boundary">
+    <strong>Boundary: arithmetic only</strong>
+    This page adds up Power over Ethernet watts from the numbers you type. It has not seen your switch, your devices or your cables. It does not know how a switch really shares its budget, the limit on each port, how devices negotiate power, or what is lost in the cable, and it gives no verdict that a switch can power your devices. Every number is your own entry, for example from the labels and data sheets.
+  </div>
+
+  <div class="panel">
+    <h2>The budget truth</h2>
+    <p class="note">Add up what two kinds of device draw and set it against the switch budget. Watts may have one decimal.</p>
+    <div class="row2">
+      <div><label for="b-b">Budget W</label><input id="b-b" type="text" value="240"></div>
+      <div></div>
+      <div><label for="b-ca">Kind A count</label><input id="b-ca" type="text" value="12"></div>
+      <div><label for="b-wa">Kind A W each</label><input id="b-wa" type="text" value="6.5"></div>
+      <div><label for="b-cb">Kind B count</label><input id="b-cb" type="text" value="4"></div>
+      <div><label for="b-wb">Kind B W each</label><input id="b-wb" type="text" value="15.4"></div>
+    </div>
+    <div class="out" id="b-out"></div>
+  </div>
+
+  <div class="panel">
+    <h2>The spare truth</h2>
+    <p class="note">How many more devices of one kind fit in what is left.</p>
+    <div class="row2">
+      <div><label for="s-b">Budget W</label><input id="s-b" type="text" value="240"></div>
+      <div><label for="s-d">Drawn W</label><input id="s-d" type="text" value="139.6"></div>
+      <div><label for="s-w">New device W</label><input id="s-w" type="text" value="15"></div>
+    </div>
+    <div class="out" id="s-out"></div>
+  </div>
+
+  <div class="panel">
+    <h2>The share truth</h2>
+    <p class="note">The budget divided evenly over the ports.</p>
+    <div class="row2">
+      <div><label for="h-b">Budget W</label><input id="h-b" type="text" value="240"></div>
+      <div><label for="h-p">Ports</label><input id="h-p" type="text" value="24"></div>
+    </div>
+    <div class="out" id="h-out"></div>
+  </div>
+
+  <footer>PoE Math is exact arithmetic over the numbers you enter. <a href="index.html">Why it exists</a>.</footer>
+</main>
+<script src="engine.js"></script>
+<script>
+  function show(id, fn) {
+    const out = document.getElementById(id);
+    try { out.textContent = fn(); out.classList.remove("err"); }
+    catch (e) { out.textContent = e.message; out.classList.add("err"); }
+  }
+  function recalc() {
+    const v = (id) => document.getElementById(id).value;
+    show("b-out", () => budgetTruth(v("b-b"), v("b-ca"), v("b-wa"), v("b-cb"), v("b-wb")));
+    show("s-out", () => spareTruth(v("s-b"), v("s-d"), v("s-w")));
+    show("h-out", () => shareTruth(v("h-b"), v("h-p")));
+  }
+  document.querySelectorAll("input").forEach((el) => {
+    el.addEventListener("input", recalc);
+    el.addEventListener("change", recalc);
+  });
+  recalc();
+</script>
+</body>
+</html>
