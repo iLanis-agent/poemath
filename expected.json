@@ -1,0 +1,1619 @@
+[
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "240",
+   "12",
+   "6.5",
+   "4",
+   "15.4"
+  ],
+  "expected": "Total draw is 139.6 W from 12 devices at 6.5 W and 4 devices at 15.4 W. Against a budget of 240 W that is 58.2 percent, leaving 100.4 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "60",
+   "4",
+   "15",
+   "0",
+   "5"
+  ],
+  "expected": "Total draw is 60 W from 4 devices at 15 W. Against a budget of 60 W that is 100 percent, with nothing spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "60",
+   "1",
+   "60",
+   "0",
+   "5"
+  ],
+  "expected": "Total draw is 60 W from 1 device at 60 W. Against a budget of 60 W that is 100 percent, with nothing spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "60",
+   "0",
+   "5",
+   "1",
+   "60"
+  ],
+  "expected": "Total draw is 60 W from 1 device at 60 W. Against a budget of 60 W that is 100 percent, with nothing spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "60",
+   "2",
+   "30",
+   "0",
+   "1"
+  ],
+  "expected": "Total draw is 60 W from 2 devices at 30 W. Against a budget of 60 W that is 100 percent, with nothing spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "60",
+   "2",
+   "30.1",
+   "0",
+   "1"
+  ],
+  "expected": "Total draw is 60.2 W from 2 devices at 30.1 W. Against a budget of 60 W that is 100.3 percent, which is 0.2 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "60",
+   "3",
+   "20",
+   "1",
+   "0.1"
+  ],
+  "expected": "Total draw is 60.1 W from 3 devices at 20 W and 1 device at 0.1 W. Against a budget of 60 W that is 100.2 percent, which is 0.1 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1",
+   "1",
+   "0.1",
+   "0",
+   "0.1"
+  ],
+  "expected": "Total draw is 0.1 W from 1 device at 0.1 W. Against a budget of 1 W that is 10 percent, leaving 0.9 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "5000",
+   "500",
+   "100",
+   "500",
+   "100"
+  ],
+  "expected": "Total draw is 100000 W from 500 devices at 100 W and 500 devices at 100 W. Against a budget of 5000 W that is 2000 percent, which is 95000 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "5000",
+   "500",
+   "10",
+   "0",
+   "0.1"
+  ],
+  "expected": "Total draw is 5000 W from 500 devices at 10 W. Against a budget of 5000 W that is 100 percent, with nothing spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "370",
+   "24",
+   "15.4",
+   "0",
+   "30"
+  ],
+  "expected": "Total draw is 369.6 W from 24 devices at 15.4 W. Against a budget of 370 W that is 99.9 percent, leaving 0.4 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "370",
+   "8",
+   "30",
+   "8",
+   "15.4"
+  ],
+  "expected": "Total draw is 363.2 W from 8 devices at 30 W and 8 devices at 15.4 W. Against a budget of 370 W that is 98.2 percent, leaving 6.8 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "123.4",
+   "7",
+   "7.7",
+   "3",
+   "9.9"
+  ],
+  "expected": "Total draw is 83.6 W from 7 devices at 7.7 W and 3 devices at 9.9 W. Against a budget of 123.4 W that is 67.7 percent, leaving 39.8 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "1",
+   "99.9",
+   "0",
+   "1"
+  ],
+  "expected": "Total draw is 99.9 W from 1 device at 99.9 W. Against a budget of 100 W that is 99.9 percent, leaving 0.1 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "1",
+   "100",
+   "0",
+   "1"
+  ],
+  "expected": "Total draw is 100 W from 1 device at 100 W. Against a budget of 100 W that is 100 percent, with nothing spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "1",
+   "100",
+   "1",
+   "0.1"
+  ],
+  "expected": "Total draw is 100.1 W from 1 device at 100 W and 1 device at 0.1 W. Against a budget of 100 W that is 100.1 percent, which is 0.1 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "0",
+   "1",
+   "5",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the budget must be from 1 to 5000 W"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "5001",
+   "1",
+   "5",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the budget must be from 1 to 5000 W"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "0",
+   "5",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:add at least 1 device"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "501",
+   "5",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the device count must be a whole number from 0 to 500"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "1",
+   "0",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the watts per device must be from 0.1 to 100 W"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "1",
+   "100.1",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the watts per device must be from 0.1 to 100 W"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "1",
+   "5",
+   "0",
+   "101"
+  ],
+  "expected": "ERR:the watts per device must be from 0.1 to 100 W"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "x",
+   "1",
+   "5",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the budget must be from 1 to 5000 W"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "1.5",
+   "5",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the device count must be a whole number from 0 to 500"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "1",
+   "5.55",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the watts per device must be from 0.1 to 100 W"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "1",
+   "",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the watts per device must be from 0.1 to 100 W"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   " 100 ",
+   " 2 ",
+   " 5.5 ",
+   " 1 ",
+   " 6 "
+  ],
+  "expected": "Total draw is 17 W from 2 devices at 5.5 W and 1 device at 6 W. Against a budget of 100 W that is 17 percent, leaving 83 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "100",
+   "-1",
+   "5",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the device count must be a whole number from 0 to 500"
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1.5",
+   "1",
+   "0.5",
+   "1",
+   "0.5"
+  ],
+  "expected": "Total draw is 1 W from 1 device at 0.5 W and 1 device at 0.5 W. Against a budget of 1.5 W that is 66.7 percent, leaving 0.5 W spare."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "240",
+   "131.6",
+   "15"
+  ],
+  "expected": "With a budget of 240 W and 131.6 W drawn, 108.4 W is spare. That fits 7 more devices of 15 W (105 W), leaving 3.4 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "240",
+   "239",
+   "15"
+  ],
+  "expected": "With a budget of 240 W and 239 W drawn, 1 W is spare. That is less than one device of 15 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "240",
+   "250",
+   "15"
+  ],
+  "expected": "The draw of 250 W is already 10 W over the budget of 240 W, so no more devices of 15 W fit."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "240",
+   "240",
+   "15"
+  ],
+  "expected": "With a budget of 240 W and 240 W drawn, 0 W is spare. That is less than one device of 15 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "240",
+   "225",
+   "15"
+  ],
+  "expected": "With a budget of 240 W and 225 W drawn, 15 W is spare. That fits 1 more device of 15 W (15 W), leaving 0 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "240",
+   "0",
+   "100"
+  ],
+  "expected": "With a budget of 240 W and 0 W drawn, 240 W is spare. That fits 2 more devices of 100 W (200 W), leaving 40 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "5000",
+   "0",
+   "0.1"
+  ],
+  "expected": "With a budget of 5000 W and 0 W drawn, 5000 W is spare. That fits 50000 more devices of 0.1 W (5000 W), leaving 0 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "5000",
+   "5000",
+   "0.1"
+  ],
+  "expected": "With a budget of 5000 W and 5000 W drawn, 0 W is spare. That is less than one device of 0.1 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "5000",
+   "4999.9",
+   "0.1"
+  ],
+  "expected": "With a budget of 5000 W and 4999.9 W drawn, 0.1 W is spare. That fits 1 more device of 0.1 W (0.1 W), leaving 0 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "60",
+   "45",
+   "15"
+  ],
+  "expected": "With a budget of 60 W and 45 W drawn, 15 W is spare. That fits 1 more device of 15 W (15 W), leaving 0 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "60",
+   "45.1",
+   "15"
+  ],
+  "expected": "With a budget of 60 W and 45.1 W drawn, 14.9 W is spare. That is less than one device of 15 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "100",
+   "33.3",
+   "33.3"
+  ],
+  "expected": "With a budget of 100 W and 33.3 W drawn, 66.7 W is spare. That fits 2 more devices of 33.3 W (66.6 W), leaving 0.1 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "0",
+   "5",
+   "5"
+  ],
+  "expected": "ERR:the budget must be from 1 to 5000 W"
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "100",
+   "5001",
+   "5"
+  ],
+  "expected": "ERR:the current draw must be from 0 to 5000 W"
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "100",
+   "-1",
+   "5"
+  ],
+  "expected": "ERR:the current draw must be from 0 to 5000 W"
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "100",
+   "5",
+   "0"
+  ],
+  "expected": "ERR:the watts per device must be from 0.1 to 100 W"
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "100",
+   "5",
+   "100.5"
+  ],
+  "expected": "ERR:the watts per device must be from 0.1 to 100 W"
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "100",
+   "x",
+   "5"
+  ],
+  "expected": "ERR:the current draw must be from 0 to 5000 W"
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "100",
+   "",
+   "5"
+  ],
+  "expected": "ERR:the current draw must be from 0 to 5000 W"
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   " 100 ",
+   " 20 ",
+   " 5 "
+  ],
+  "expected": "With a budget of 100 W and 20 W drawn, 80 W is spare. That fits 16 more devices of 5 W (80 W), leaving 0 W."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "240",
+   "24"
+  ],
+  "expected": "A budget of 240 W shared evenly over 24 ports is 10 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "100",
+   "3"
+  ],
+  "expected": "A budget of 100 W shared evenly over 3 ports is 33.3 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "100",
+   "7"
+  ],
+  "expected": "A budget of 100 W shared evenly over 7 ports is 14.3 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "370",
+   "48"
+  ],
+  "expected": "A budget of 370 W shared evenly over 48 ports is 7.7 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "1",
+   "500"
+  ],
+  "expected": "A budget of 1 W shared evenly over 500 ports is 0 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "1",
+   "1"
+  ],
+  "expected": "A budget of 1 W shared evenly over 1 port is 1 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "5000",
+   "1"
+  ],
+  "expected": "A budget of 5000 W shared evenly over 1 port is 5000 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "5000",
+   "500"
+  ],
+  "expected": "A budget of 5000 W shared evenly over 500 ports is 10 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "0.5",
+   "1"
+  ],
+  "expected": "ERR:the budget must be from 1 to 5000 W"
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "2.5",
+   "3"
+  ],
+  "expected": "A budget of 2.5 W shared evenly over 3 ports is 0.8 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "60",
+   "8"
+  ],
+  "expected": "A budget of 60 W shared evenly over 8 ports is 7.5 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "0",
+   "24"
+  ],
+  "expected": "ERR:the budget must be from 1 to 5000 W"
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "5001",
+   "24"
+  ],
+  "expected": "ERR:the budget must be from 1 to 5000 W"
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "240",
+   "0"
+  ],
+  "expected": "ERR:the ports must be a whole number from 1 to 500"
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "240",
+   "501"
+  ],
+  "expected": "ERR:the ports must be a whole number from 1 to 500"
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "240",
+   "2.5"
+  ],
+  "expected": "ERR:the ports must be a whole number from 1 to 500"
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "x",
+   "24"
+  ],
+  "expected": "ERR:the budget must be from 1 to 5000 W"
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "240",
+   ""
+  ],
+  "expected": "ERR:the ports must be a whole number from 1 to 500"
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   " 240 ",
+   " 24 "
+  ],
+  "expected": "A budget of 240 W shared evenly over 24 ports is 10 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "3056",
+   "91",
+   "40",
+   "49",
+   "16.7"
+  ],
+  "expected": "Total draw is 4458.3 W from 91 devices at 40 W and 49 devices at 16.7 W. Against a budget of 3056 W that is 145.9 percent, which is 1402.3 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2371.5",
+   "22",
+   "2.6",
+   "11",
+   "16"
+  ],
+  "expected": "Total draw is 233.2 W from 22 devices at 2.6 W and 11 devices at 16 W. Against a budget of 2371.5 W that is 9.8 percent, leaving 2138.3 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "3224",
+   "46",
+   "34.8",
+   "52",
+   "61.9"
+  ],
+  "expected": "Total draw is 4819.6 W from 46 devices at 34.8 W and 52 devices at 61.9 W. Against a budget of 3224 W that is 149.5 percent, which is 1595.6 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "4453.2",
+   "64",
+   "50.6",
+   "47",
+   "16.6"
+  ],
+  "expected": "Total draw is 4018.6 W from 64 devices at 50.6 W and 47 devices at 16.6 W. Against a budget of 4453.2 W that is 90.2 percent, leaving 434.6 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "4211",
+   "37",
+   "92.6",
+   "79",
+   "72.6"
+  ],
+  "expected": "Total draw is 9161.6 W from 37 devices at 92.6 W and 79 devices at 72.6 W. Against a budget of 4211 W that is 217.6 percent, which is 4950.6 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2558",
+   "75",
+   "22.5",
+   "21",
+   "39"
+  ],
+  "expected": "Total draw is 2506.5 W from 75 devices at 22.5 W and 21 devices at 39 W. Against a budget of 2558 W that is 98 percent, leaving 51.5 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "4464.1",
+   "83",
+   "20.9",
+   "10",
+   "92"
+  ],
+  "expected": "Total draw is 2654.7 W from 83 devices at 20.9 W and 10 devices at 92 W. Against a budget of 4464.1 W that is 59.5 percent, leaving 1809.4 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "3407.2",
+   "98",
+   "68",
+   "58",
+   "32"
+  ],
+  "expected": "Total draw is 8520 W from 98 devices at 68 W and 58 devices at 32 W. Against a budget of 3407.2 W that is 250.1 percent, which is 5112.8 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1858.5",
+   "85",
+   "3.6",
+   "14",
+   "28.3"
+  ],
+  "expected": "Total draw is 702.2 W from 85 devices at 3.6 W and 14 devices at 28.3 W. Against a budget of 1858.5 W that is 37.8 percent, leaving 1156.3 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2262.4",
+   "20",
+   "39.7",
+   "67",
+   "18"
+  ],
+  "expected": "Total draw is 2000 W from 20 devices at 39.7 W and 67 devices at 18 W. Against a budget of 2262.4 W that is 88.4 percent, leaving 262.4 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2448.4",
+   "5",
+   "63.3",
+   "55",
+   "12.4"
+  ],
+  "expected": "Total draw is 998.5 W from 5 devices at 63.3 W and 55 devices at 12.4 W. Against a budget of 2448.4 W that is 40.8 percent, leaving 1449.9 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2499.8",
+   "33",
+   "6",
+   "89",
+   "18.6"
+  ],
+  "expected": "Total draw is 1853.4 W from 33 devices at 6 W and 89 devices at 18.6 W. Against a budget of 2499.8 W that is 74.1 percent, leaving 646.4 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1874.8",
+   "59",
+   "1.7",
+   "93",
+   "98"
+  ],
+  "expected": "Total draw is 9214.3 W from 59 devices at 1.7 W and 93 devices at 98 W. Against a budget of 1874.8 W that is 491.5 percent, which is 7339.5 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "202",
+   "22",
+   "16",
+   "40",
+   "60"
+  ],
+  "expected": "Total draw is 2752 W from 22 devices at 16 W and 40 devices at 60 W. Against a budget of 202 W that is 1362.4 percent, which is 2550 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "3121",
+   "9",
+   "18.3",
+   "94",
+   "60"
+  ],
+  "expected": "Total draw is 5804.7 W from 9 devices at 18.3 W and 94 devices at 60 W. Against a budget of 3121 W that is 186 percent, which is 2683.7 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "4628.8",
+   "97",
+   "15",
+   "86",
+   "15"
+  ],
+  "expected": "Total draw is 2745 W from 97 devices at 15 W and 86 devices at 15 W. Against a budget of 4628.8 W that is 59.3 percent, leaving 1883.8 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2152",
+   "20",
+   "15.4",
+   "58",
+   "73"
+  ],
+  "expected": "Total draw is 4542 W from 20 devices at 15.4 W and 58 devices at 73 W. Against a budget of 2152 W that is 211.1 percent, which is 2390 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "3045.4",
+   "11",
+   "64.5",
+   "85",
+   "18.7"
+  ],
+  "expected": "Total draw is 2299 W from 11 devices at 64.5 W and 85 devices at 18.7 W. Against a budget of 3045.4 W that is 75.5 percent, leaving 746.4 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1754",
+   "73",
+   "35",
+   "78",
+   "54"
+  ],
+  "expected": "Total draw is 6767 W from 73 devices at 35 W and 78 devices at 54 W. Against a budget of 1754 W that is 385.8 percent, which is 5013 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1936",
+   "99",
+   "98",
+   "88",
+   "51"
+  ],
+  "expected": "Total draw is 14190 W from 99 devices at 98 W and 88 devices at 51 W. Against a budget of 1936 W that is 733 percent, which is 12254 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1536.6",
+   "37",
+   "25.9",
+   "52",
+   "96"
+  ],
+  "expected": "Total draw is 5950.3 W from 37 devices at 25.9 W and 52 devices at 96 W. Against a budget of 1536.6 W that is 387.2 percent, which is 4413.7 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "3571.5",
+   "35",
+   "92",
+   "13",
+   "39"
+  ],
+  "expected": "Total draw is 3727 W from 35 devices at 92 W and 13 devices at 39 W. Against a budget of 3571.5 W that is 104.4 percent, which is 155.5 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2435.6",
+   "51",
+   "6",
+   "47",
+   "83.1"
+  ],
+  "expected": "Total draw is 4211.7 W from 51 devices at 6 W and 47 devices at 83.1 W. Against a budget of 2435.6 W that is 172.9 percent, which is 1776.1 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2786",
+   "21",
+   "37",
+   "39",
+   "45.2"
+  ],
+  "expected": "Total draw is 2539.8 W from 21 devices at 37 W and 39 devices at 45.2 W. Against a budget of 2786 W that is 91.2 percent, leaving 246.2 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2555",
+   "22",
+   "4",
+   "91",
+   "1"
+  ],
+  "expected": "Total draw is 179 W from 22 devices at 4 W and 91 devices at 1 W. Against a budget of 2555 W that is 7 percent, leaving 2376 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2169.4",
+   "66",
+   "88.5",
+   "57",
+   "95"
+  ],
+  "expected": "Total draw is 11256 W from 66 devices at 88.5 W and 57 devices at 95 W. Against a budget of 2169.4 W that is 518.9 percent, which is 9086.6 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "4539.4",
+   "62",
+   "50",
+   "1",
+   "32.2"
+  ],
+  "expected": "Total draw is 3132.2 W from 62 devices at 50 W and 1 device at 32.2 W. Against a budget of 4539.4 W that is 69 percent, leaving 1407.2 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1985.1",
+   "30",
+   "63.6",
+   "37",
+   "54"
+  ],
+  "expected": "Total draw is 3906 W from 30 devices at 63.6 W and 37 devices at 54 W. Against a budget of 1985.1 W that is 196.8 percent, which is 1920.9 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1111",
+   "41",
+   "75",
+   "38",
+   "84"
+  ],
+  "expected": "Total draw is 6267 W from 41 devices at 75 W and 38 devices at 84 W. Against a budget of 1111 W that is 564.1 percent, which is 5156 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2480",
+   "25",
+   "1.7",
+   "16",
+   "70"
+  ],
+  "expected": "Total draw is 1162.5 W from 25 devices at 1.7 W and 16 devices at 70 W. Against a budget of 2480 W that is 46.9 percent, leaving 1317.5 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2502",
+   "98",
+   "49.3",
+   "88",
+   "12"
+  ],
+  "expected": "Total draw is 5887.4 W from 98 devices at 49.3 W and 88 devices at 12 W. Against a budget of 2502 W that is 235.3 percent, which is 3385.4 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "4088.3",
+   "50",
+   "28.4",
+   "74",
+   "48.8"
+  ],
+  "expected": "Total draw is 5031.2 W from 50 devices at 28.4 W and 74 devices at 48.8 W. Against a budget of 4088.3 W that is 123.1 percent, which is 942.9 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1378.7",
+   "46",
+   "79.5",
+   "60",
+   "70.4"
+  ],
+  "expected": "Total draw is 7881 W from 46 devices at 79.5 W and 60 devices at 70.4 W. Against a budget of 1378.7 W that is 571.6 percent, which is 6502.3 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "3215.4",
+   "8",
+   "11.9",
+   "95",
+   "37"
+  ],
+  "expected": "Total draw is 3610.2 W from 8 devices at 11.9 W and 95 devices at 37 W. Against a budget of 3215.4 W that is 112.3 percent, which is 394.8 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2956",
+   "81",
+   "98",
+   "43",
+   "89"
+  ],
+  "expected": "Total draw is 11765 W from 81 devices at 98 W and 43 devices at 89 W. Against a budget of 2956 W that is 398 percent, which is 8809 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "45",
+   "75",
+   "63",
+   "47",
+   "22"
+  ],
+  "expected": "Total draw is 5759 W from 75 devices at 63 W and 47 devices at 22 W. Against a budget of 45 W that is 12797.8 percent, which is 5714 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "2010",
+   "4",
+   "87.4",
+   "10",
+   "17"
+  ],
+  "expected": "Total draw is 519.6 W from 4 devices at 87.4 W and 10 devices at 17 W. Against a budget of 2010 W that is 25.9 percent, leaving 1490.4 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "4742.2",
+   "41",
+   "32.7",
+   "5",
+   "60.8"
+  ],
+  "expected": "Total draw is 1644.7 W from 41 devices at 32.7 W and 5 devices at 60.8 W. Against a budget of 4742.2 W that is 34.7 percent, leaving 3097.5 W spare."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "3713",
+   "92",
+   "95.8",
+   "0",
+   "92"
+  ],
+  "expected": "Total draw is 8813.6 W from 92 devices at 95.8 W. Against a budget of 3713 W that is 237.4 percent, which is 5100.6 W over the budget."
+ },
+ {
+  "fn": "budgetTruth",
+  "args": [
+   "1997.6",
+   "83",
+   "92",
+   "57",
+   "43"
+  ],
+  "expected": "Total draw is 10087 W from 83 devices at 92 W and 57 devices at 43 W. Against a budget of 1997.6 W that is 505 percent, which is 8089.4 W over the budget."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1225.5",
+   "359.7",
+   "90.5"
+  ],
+  "expected": "With a budget of 1225.5 W and 359.7 W drawn, 865.8 W is spare. That fits 9 more devices of 90.5 W (814.5 W), leaving 51.3 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1164.3",
+   "880.6",
+   "36.7"
+  ],
+  "expected": "With a budget of 1164.3 W and 880.6 W drawn, 283.7 W is spare. That fits 7 more devices of 36.7 W (256.9 W), leaving 26.8 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "81.4",
+   "18.7",
+   "59"
+  ],
+  "expected": "With a budget of 81.4 W and 18.7 W drawn, 62.7 W is spare. That fits 1 more device of 59 W (59 W), leaving 3.7 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "547.0",
+   "367.4",
+   "98"
+  ],
+  "expected": "With a budget of 547 W and 367.4 W drawn, 179.6 W is spare. That fits 1 more device of 98 W (98 W), leaving 81.6 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1276.1",
+   "74.1",
+   "48.5"
+  ],
+  "expected": "With a budget of 1276.1 W and 74.1 W drawn, 1202 W is spare. That fits 24 more devices of 48.5 W (1164 W), leaving 38 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1066.3",
+   "660.4",
+   "86"
+  ],
+  "expected": "With a budget of 1066.3 W and 660.4 W drawn, 405.9 W is spare. That fits 4 more devices of 86 W (344 W), leaving 61.9 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1703.9",
+   "1678.7",
+   "76"
+  ],
+  "expected": "With a budget of 1703.9 W and 1678.7 W drawn, 25.2 W is spare. That is less than one device of 76 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "299.4",
+   "176.6",
+   "61"
+  ],
+  "expected": "With a budget of 299.4 W and 176.6 W drawn, 122.8 W is spare. That fits 2 more devices of 61 W (122 W), leaving 0.8 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "759.1",
+   "501.3",
+   "51.8"
+  ],
+  "expected": "With a budget of 759.1 W and 501.3 W drawn, 257.8 W is spare. That fits 4 more devices of 51.8 W (207.2 W), leaving 50.6 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "39.2",
+   "20.4",
+   "99"
+  ],
+  "expected": "With a budget of 39.2 W and 20.4 W drawn, 18.8 W is spare. That is less than one device of 99 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1395.3",
+   "598.2",
+   "55"
+  ],
+  "expected": "With a budget of 1395.3 W and 598.2 W drawn, 797.1 W is spare. That fits 14 more devices of 55 W (770 W), leaving 27.1 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1088.5",
+   "289.5",
+   "1"
+  ],
+  "expected": "With a budget of 1088.5 W and 289.5 W drawn, 799 W is spare. That fits 799 more devices of 1 W (799 W), leaving 0 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "387.1",
+   "337.7",
+   "19.2"
+  ],
+  "expected": "With a budget of 387.1 W and 337.7 W drawn, 49.4 W is spare. That fits 2 more devices of 19.2 W (38.4 W), leaving 11 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "640.3",
+   "320.5",
+   "88.4"
+  ],
+  "expected": "With a budget of 640.3 W and 320.5 W drawn, 319.8 W is spare. That fits 3 more devices of 88.4 W (265.2 W), leaving 54.6 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1351.9",
+   "945.9",
+   "62"
+  ],
+  "expected": "With a budget of 1351.9 W and 945.9 W drawn, 406 W is spare. That fits 6 more devices of 62 W (372 W), leaving 34 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "254.0",
+   "137.5",
+   "82.5"
+  ],
+  "expected": "With a budget of 254 W and 137.5 W drawn, 116.5 W is spare. That fits 1 more device of 82.5 W (82.5 W), leaving 34 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "243.1",
+   "139.3",
+   "75"
+  ],
+  "expected": "With a budget of 243.1 W and 139.3 W drawn, 103.8 W is spare. That fits 1 more device of 75 W (75 W), leaving 28.8 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1332.4",
+   "477.6",
+   "24"
+  ],
+  "expected": "With a budget of 1332.4 W and 477.6 W drawn, 854.8 W is spare. That fits 35 more devices of 24 W (840 W), leaving 14.8 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "922.3",
+   "245.3",
+   "88.4"
+  ],
+  "expected": "With a budget of 922.3 W and 245.3 W drawn, 677 W is spare. That fits 7 more devices of 88.4 W (618.8 W), leaving 58.2 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "292.0",
+   "292.0",
+   "63"
+  ],
+  "expected": "With a budget of 292 W and 292 W drawn, 0 W is spare. That is less than one device of 63 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1330.4",
+   "475.4",
+   "65.7"
+  ],
+  "expected": "With a budget of 1330.4 W and 475.4 W drawn, 855 W is spare. That fits 13 more devices of 65.7 W (854.1 W), leaving 0.9 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "243.8",
+   "218.1",
+   "17"
+  ],
+  "expected": "With a budget of 243.8 W and 218.1 W drawn, 25.7 W is spare. That fits 1 more device of 17 W (17 W), leaving 8.7 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1040.8",
+   "57.2",
+   "41"
+  ],
+  "expected": "With a budget of 1040.8 W and 57.2 W drawn, 983.6 W is spare. That fits 23 more devices of 41 W (943 W), leaving 40.6 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "208.1",
+   "182.8",
+   "69.6"
+  ],
+  "expected": "With a budget of 208.1 W and 182.8 W drawn, 25.3 W is spare. That is less than one device of 69.6 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "825.4",
+   "288.2",
+   "2"
+  ],
+  "expected": "With a budget of 825.4 W and 288.2 W drawn, 537.2 W is spare. That fits 268 more devices of 2 W (536 W), leaving 1.2 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1936.7",
+   "406.0",
+   "5"
+  ],
+  "expected": "With a budget of 1936.7 W and 406 W drawn, 1530.7 W is spare. That fits 306 more devices of 5 W (1530 W), leaving 0.7 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1911.1",
+   "574.4",
+   "98"
+  ],
+  "expected": "With a budget of 1911.1 W and 574.4 W drawn, 1336.7 W is spare. That fits 13 more devices of 98 W (1274 W), leaving 62.7 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1379.6",
+   "151.5",
+   "31"
+  ],
+  "expected": "With a budget of 1379.6 W and 151.5 W drawn, 1228.1 W is spare. That fits 39 more devices of 31 W (1209 W), leaving 19.1 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "852.2",
+   "753.6",
+   "81"
+  ],
+  "expected": "With a budget of 852.2 W and 753.6 W drawn, 98.6 W is spare. That fits 1 more device of 81 W (81 W), leaving 17.6 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "178.8",
+   "137.5",
+   "47"
+  ],
+  "expected": "With a budget of 178.8 W and 137.5 W drawn, 41.3 W is spare. That is less than one device of 47 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1486.8",
+   "1049.2",
+   "51.4"
+  ],
+  "expected": "With a budget of 1486.8 W and 1049.2 W drawn, 437.6 W is spare. That fits 8 more devices of 51.4 W (411.2 W), leaving 26.4 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1527.6",
+   "19.8",
+   "27.1"
+  ],
+  "expected": "With a budget of 1527.6 W and 19.8 W drawn, 1507.8 W is spare. That fits 55 more devices of 27.1 W (1490.5 W), leaving 17.3 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1415.5",
+   "841.8",
+   "71"
+  ],
+  "expected": "With a budget of 1415.5 W and 841.8 W drawn, 573.7 W is spare. That fits 8 more devices of 71 W (568 W), leaving 5.7 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "1173.1",
+   "844.7",
+   "15.4"
+  ],
+  "expected": "With a budget of 1173.1 W and 844.7 W drawn, 328.4 W is spare. That fits 21 more devices of 15.4 W (323.4 W), leaving 5 W."
+ },
+ {
+  "fn": "spareTruth",
+  "args": [
+   "470.3",
+   "354.5",
+   "75.9"
+  ],
+  "expected": "With a budget of 470.3 W and 354.5 W drawn, 115.8 W is spare. That fits 1 more device of 75.9 W (75.9 W), leaving 39.9 W."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "1182",
+   "313"
+  ],
+  "expected": "A budget of 1182 W shared evenly over 313 ports is 3.8 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "3191.4",
+   "7"
+  ],
+  "expected": "A budget of 3191.4 W shared evenly over 7 ports is 455.9 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "3658",
+   "279"
+  ],
+  "expected": "A budget of 3658 W shared evenly over 279 ports is 13.1 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "2333.3",
+   "100"
+  ],
+  "expected": "A budget of 2333.3 W shared evenly over 100 ports is 23.3 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "4443",
+   "448"
+  ],
+  "expected": "A budget of 4443 W shared evenly over 448 ports is 9.9 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "3868.7",
+   "81"
+  ],
+  "expected": "A budget of 3868.7 W shared evenly over 81 ports is 47.8 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "1106.9",
+   "45"
+  ],
+  "expected": "A budget of 1106.9 W shared evenly over 45 ports is 24.6 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "3422",
+   "102"
+  ],
+  "expected": "A budget of 3422 W shared evenly over 102 ports is 33.5 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "2418.9",
+   "59"
+  ],
+  "expected": "A budget of 2418.9 W shared evenly over 59 ports is 41 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "3050.5",
+   "40"
+  ],
+  "expected": "A budget of 3050.5 W shared evenly over 40 ports is 76.3 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "42.7",
+   "26"
+  ],
+  "expected": "A budget of 42.7 W shared evenly over 26 ports is 1.6 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "1459.1",
+   "290"
+  ],
+  "expected": "A budget of 1459.1 W shared evenly over 290 ports is 5 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "3918",
+   "263"
+  ],
+  "expected": "A budget of 3918 W shared evenly over 263 ports is 14.9 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "1535",
+   "51"
+  ],
+  "expected": "A budget of 1535 W shared evenly over 51 ports is 30.1 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "1832",
+   "158"
+  ],
+  "expected": "A budget of 1832 W shared evenly over 158 ports is 11.6 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "1833.7",
+   "46"
+  ],
+  "expected": "A budget of 1833.7 W shared evenly over 46 ports is 39.9 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "2086.9",
+   "353"
+  ],
+  "expected": "A budget of 2086.9 W shared evenly over 353 ports is 5.9 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "2421.2",
+   "63"
+  ],
+  "expected": "A budget of 2421.2 W shared evenly over 63 ports is 38.4 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "794",
+   "449"
+  ],
+  "expected": "A budget of 794 W shared evenly over 449 ports is 1.8 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "3625",
+   "305"
+  ],
+  "expected": "A budget of 3625 W shared evenly over 305 ports is 11.9 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "4711",
+   "96"
+  ],
+  "expected": "A budget of 4711 W shared evenly over 96 ports is 49.1 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "4226",
+   "184"
+  ],
+  "expected": "A budget of 4226 W shared evenly over 184 ports is 23 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "4868.3",
+   "205"
+  ],
+  "expected": "A budget of 4868.3 W shared evenly over 205 ports is 23.7 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "4978",
+   "249"
+  ],
+  "expected": "A budget of 4978 W shared evenly over 249 ports is 20 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ },
+ {
+  "fn": "shareTruth",
+  "args": [
+   "880.9",
+   "469"
+  ],
+  "expected": "A budget of 880.9 W shared evenly over 469 ports is 1.9 W a port. That is only the average. It says nothing about what any one port is allowed to draw."
+ }
+]
