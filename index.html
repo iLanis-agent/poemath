@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PoE Math - Power over Ethernet budget arithmetic</title>
+<style>
+  :root { --accent:#1d4ed8; --ink:#0f1b3d; --paper:#f4f7fe; --soft:#dde6fa; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); line-height:1.55; }
+  main { max-width:660px; margin:0 auto; }
+  .boundary { background:#fdeaea; border-left:6px solid #b03030; color:#5c1c1c; border-radius:6px; padding:1rem 1.1rem; }
+  .boundary strong { display:block; margin-bottom:.3rem; }
+  body { padding:2.5rem 1.2rem; }
+  h1 { font-size:2.2rem; color:var(--accent); }
+  p.lede { font-size:1.12rem; margin:.9rem 0 1.6rem; }
+  .boundary { margin-bottom:1.6rem; }
+  section { background:var(--soft); border-left:5px solid var(--accent); border-radius:6px; padding:1.1rem 1.2rem; margin-bottom:1.2rem; }
+  h2 { font-size:1.18rem; margin-bottom:.5rem; }
+  section p { font-size:.98rem; }
+  a.btn { display:inline-block; margin-top:1.4rem; background:var(--accent); color:#fff; text-decoration:none; padding:.8rem 1.6rem; border-radius:999px; font-size:1.05rem; }
+  footer { margin-top:2.2rem; font-size:.85rem; color:#5f78b0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>PoE Math</h1>
+  <p class="lede">12 devices at 6.5 W and 4 devices at 15.4 W draw 139.6 W in total, which is 58.2 percent of a 240 W switch budget.</p>
+  <div class="boundary">
+    <strong>Boundary: arithmetic only</strong>
+    PoE Math adds up Power over Ethernet watts from the numbers you type. It has not seen your switch, your devices or your cables. It does not know how a switch really shares its budget, the limit on each port, how devices negotiate power, or what is lost in the cable, and it gives no verdict that a switch can power your devices. Every number is your own entry, for example from the labels and data sheets.
+  </div>
+  <p class="lede" style="font-size:1rem">Starting examples: two kinds of device on a 240 W budget, how many more 15 W devices fit in what is left, and the budget shared over 24 ports.</p>
+  <section>
+    <h2>The budget truth</h2>
+    <p>Total draw is 139.6 W from 12 devices at 6.5 W and 4 devices at 15.4 W. Against a budget of 240 W that is 58.2 percent, leaving 100.4 W spare.</p>
+  </section>
+  <section>
+    <h2>The spare truth</h2>
+    <p>With a budget of 240 W and 139.6 W drawn, 100.4 W is spare. That fits 6 more devices of 15 W (90 W), leaving 10.4 W.</p>
+  </section>
+  <section>
+    <h2>The share truth</h2>
+    <p>A budget of 240 W shared evenly over 24 ports is 10 W a port. That is only the average. It says nothing about what any one port is allowed to draw.</p>
+  </section>
+  <a class="btn" href="app.html">Add up your watts</a>
+  <footer>PoE Math is exact arithmetic over the numbers you enter, nothing more.</footer>
+</main>
+</body>
+</html>
